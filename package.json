@@ -1,0 +1,16 @@
+{
+  "name": "gr-race-strategist-ai",
+  "version": "1.0.0",
+  "description": "GR Race Strategist AI - Real-time race strategy prediction system",
+  "scripts": {
+    "start": "./start.sh",
+    "dev": "./start.sh",
+    "backend": "cd backend && source venv/bin/activate && uvicorn main:app --reload",
+    "frontend": "cd frontend && npm run dev",
+    "install": "cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && cd ../frontend && npm install"
+  },
+  "keywords": ["racing", "strategy", "toyota", "gr", "ai"],
+  "author": "",
+  "license": "MIT"
+}
+

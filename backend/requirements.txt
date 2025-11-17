@@ -1,0 +1,23 @@
+# FastAPI Backend Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# CORS is handled by FastAPI's built-in CORSMiddleware (no extra package needed)
+
+# Data Processing & ML
+pandas==2.1.3
+numpy==1.26.2
+scikit-learn==1.3.2
+
+# WebSocket support for real-time updates
+websockets==12.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Optional: For production deployment
+gunicorn==21.2.0
+

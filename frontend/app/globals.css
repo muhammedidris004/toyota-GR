@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gr-black: #000000;
+  --gr-red: #E60012;
+  --gr-grey: #2C2C2C;
+  --gr-neon: #00FF88;
+  --gr-asphalt: #1A1A1A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @apply bg-gr-black text-white;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  background-attachment: fixed;
+}
+
+/* Professional card styling */
+.card {
+  @apply bg-gradient-to-br from-gr-asphalt to-gr-black;
+  @apply border border-gr-grey/50;
+  @apply rounded-xl;
+  @apply shadow-gr;
+  @apply backdrop-blur-sm;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  @apply border-gr-red/50;
+  @apply shadow-gr-red;
+  transform: translateY(-2px);
+}
+
+/* Professional button styling */
+.btn-primary {
+  @apply bg-gr-red-gradient;
+  @apply text-white;
+  @apply font-semibold;
+  @apply px-6 py-3;
+  @apply rounded-lg;
+  @apply shadow-gr-red;
+  @apply transition-all;
+  @apply duration-300;
+}
+
+.btn-primary:hover {
+  @apply shadow-gr-lg;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  @apply bg-gr-asphalt;
+  @apply text-white;
+  @apply border border-gr-grey;
+  @apply font-semibold;
+  @apply px-6 py-3;
+  @apply rounded-lg;
+  @apply transition-all;
+  @apply duration-300;
+}
+
+.btn-secondary:hover {
+  @apply border-gr-red;
+  @apply bg-gr-grey;
+}
+
+/* Professional input styling */
+.input-field {
+  @apply bg-gr-asphalt;
+  @apply border border-gr-grey;
+  @apply text-white;
+  @apply rounded-lg;
+  @apply px-4 py-2;
+  @apply focus:outline-none;
+  @apply focus:border-gr-red;
+  @apply focus:ring-2;
+  @apply focus:ring-gr-red/20;
+  @apply transition-all;
+}
+
+/* Metric card styling */
+.metric-card {
+  @apply bg-gradient-to-br from-gr-asphalt/80 to-gr-black/80;
+  @apply border border-gr-grey/30;
+  @apply rounded-lg;
+  @apply p-4;
+  @apply backdrop-blur-sm;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  @apply border-gr-neon/50;
+  @apply shadow-gr-neon;
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar for GR theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gr-asphalt;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gr-grey;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gr-red;
+}
+
