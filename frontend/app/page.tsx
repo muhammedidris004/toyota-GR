@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        const response = await fetch('http://localhost:8000/health')
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://toyota-gr.onrender.com'}/health`)
         if (response.ok) {
           setBackendStatus('connected')
           // Load data info if backend is connected
@@ -136,7 +136,7 @@ export default function Home() {
           </div>
           {backendStatus === 'error' && (
             <p className="text-sm text-gr-grey mt-4">
-              Ensure backend is running on http://localhost:8000
+              Ensure backend is running on https://toyota-gr.onrender.com
             </p>
           )}
         </div>

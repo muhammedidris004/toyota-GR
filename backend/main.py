@@ -33,7 +33,11 @@ app = FastAPI(
 # Configure CORS to allow frontend requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.js default port
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://*.vercel.app",   # Vercel preview deployments
+        "https://toyota-gr-ai.vercel.app",  # Production Vercel URL (update after deployment)
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
