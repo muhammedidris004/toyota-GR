@@ -2,7 +2,8 @@ services:
   - type: web
     name: gr-race-strategist-api
     env: python
-    buildCommand: pip install -r backend/requirements.txt
+    pythonVersion: "3.10.12"
+    buildCommand: pip install --upgrade pip && pip install -r backend/requirements.txt
     startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
