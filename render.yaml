@@ -9,4 +9,6 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.12
+      - key: RENDER_PYTHON_VERSION
+        value: 3.10.12
 
