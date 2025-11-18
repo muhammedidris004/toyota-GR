@@ -111,7 +111,9 @@ export default function Home() {
               ? 'bg-gradient-to-r from-gr-neon to-gr-neon-dark text-gr-black shadow-gr-neon' 
               : backendStatus === 'checking'
               ? 'bg-gr-grey text-white'
-              : 'bg-gr-red text-white shadow-gr-red'
+              : backendStatus === 'error'
+              ? 'bg-gr-red text-white shadow-gr-red'
+              : 'bg-gr-grey text-white'
           }`}>
             <span className={`w-2 h-2 rounded-full bg-current ${
               backendStatus === 'connected' ? 'animate-pulse' : ''
