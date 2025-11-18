@@ -12,6 +12,7 @@ pydantic-settings==2.1.0
 # CORS is handled by FastAPI's built-in CORSMiddleware (no extra package needed)
 
 # Data Processing & ML
+# Using specific versions compatible with Python 3.10 (Render default)
 pandas==2.1.3
 numpy==1.26.2
 scikit-learn==1.3.2
