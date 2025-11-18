@@ -122,16 +122,26 @@ async def load_trd_data(track: str, race: str = "Race 1", data_root: Optional[st
     
     try:
         # Default data root (relative to backend folder)
-        if data_root is None:
-            data_root = "Data-GR"
-        
-        # Validate Data-GR folder exists
+        # Use Data-GR-minimal by default (deployed to Render), fall back to Data-GR for local dev
         from pathlib import Path
+        if data_root is None:
+            # Try Data-GR-minimal first (deployed version), then Data-GR (local dev)
+            if Path("Data-GR-minimal").exists():
+                data_root = "Data-GR-minimal"
+            elif Path("Data-GR").exists():
+                data_root = "Data-GR"
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail="Neither Data-GR-minimal nor Data-GR folder found. Please ensure the dataset folder exists."
+                )
+        
+        # Validate data folder exists
         data_path = Path(data_root)
         if not data_path.exists():
             raise HTTPException(
                 status_code=404, 
-                detail=f"Data-GR folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure Data-GR folder exists with the hackathon datasets."
+                detail=f"Data folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure the dataset folder exists with the hackathon datasets."
             )
         
         # Initialize TRD loader
@@ -194,16 +204,28 @@ async def load_trd_data(track: str, race: str = "Race 1", data_root: Optional[st
 
 
 @app.get("/api/data/trd/tracks", tags=["Data"])
-async def list_trd_tracks(data_root: str = "Data-GR"):
+async def list_trd_tracks(data_root: Optional[str] = None):
     """List all available tracks in TRD dataset (REAL-TIME TRD data only)"""
     try:
-        # Validate Data-GR folder exists
+        # Use Data-GR-minimal by default (deployed to Render), fall back to Data-GR for local dev
         from pathlib import Path
+        if data_root is None:
+            if Path("Data-GR-minimal").exists():
+                data_root = "Data-GR-minimal"
+            elif Path("Data-GR").exists():
+                data_root = "Data-GR"
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail="Neither Data-GR-minimal nor Data-GR folder found. Please ensure the dataset folder exists."
+                )
+        
+        # Validate data folder exists
         data_path = Path(data_root)
         if not data_path.exists():
             raise HTTPException(
                 status_code=404, 
-                detail=f"Data-GR folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure Data-GR folder exists with the hackathon datasets."
+                detail=f"Data folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure the dataset folder exists with the hackathon datasets."
             )
         
         trd_loader = TRDDataLoader(data_root=data_root)
@@ -219,16 +241,28 @@ async def list_trd_tracks(data_root: str = "Data-GR"):
 
 
 @app.get("/api/data/trd/races/{track}", tags=["Data"])
-async def list_trd_races(track: str, data_root: str = "Data-GR"):
+async def list_trd_races(track: str, data_root: Optional[str] = None):
     """List available races for a track (REAL-TIME TRD data only)"""
     try:
-        # Validate Data-GR folder exists
+        # Use Data-GR-minimal by default (deployed to Render), fall back to Data-GR for local dev
         from pathlib import Path
+        if data_root is None:
+            if Path("Data-GR-minimal").exists():
+                data_root = "Data-GR-minimal"
+            elif Path("Data-GR").exists():
+                data_root = "Data-GR"
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail="Neither Data-GR-minimal nor Data-GR folder found. Please ensure the dataset folder exists."
+                )
+        
+        # Validate data folder exists
         data_path = Path(data_root)
         if not data_path.exists():
             raise HTTPException(
                 status_code=404, 
-                detail=f"Data-GR folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure Data-GR folder exists with the hackathon datasets."
+                detail=f"Data folder not found at {data_root}. This application requires real-time TRD hackathon data. Please ensure the dataset folder exists with the hackathon datasets."
             )
         
         trd_loader = TRDDataLoader(data_root=data_root)

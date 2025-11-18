@@ -113,25 +113,37 @@ export async function loadTRDData(track: string, race: string = 'Race 1') {
   const response = await fetch(`${API_BASE_URL}/api/data/load-trd?track=${encodeURIComponent(track)}&race=${encodeURIComponent(race)}`, {
     method: 'POST',
   });
-  if (!response.ok) throw new Error('Failed to load TRD data');
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'Failed to load TRD data' }));
+    throw new Error(errorData.detail || 'Failed to load TRD data');
+  }
   return response.json();
 }
 
 export async function getDataInfo(): Promise<DataInfo> {
   const response = await fetch(`${API_BASE_URL}/api/data/info`);
-  if (!response.ok) throw new Error('Failed to get data info');
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'Failed to get data info' }));
+    throw new Error(errorData.detail || 'Failed to get data info');
+  }
   return response.json();
 }
 
 export async function listTRDTracks() {
   const response = await fetch(`${API_BASE_URL}/api/data/trd/tracks`);
-  if (!response.ok) throw new Error('Failed to list tracks');
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'Failed to list tracks' }));
+    throw new Error(errorData.detail || 'Failed to list tracks');
+  }
   return response.json();
 }
 
 export async function listTRDRaces(track: string) {
   const response = await fetch(`${API_BASE_URL}/api/data/trd/races/${encodeURIComponent(track)}`);
-  if (!response.ok) throw new Error('Failed to list races');
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'Failed to list races' }));
+    throw new Error(errorData.detail || 'Failed to list races');
+  }
   return response.json();
 }
 
@@ -176,7 +188,10 @@ export async function getStrategy(
   const response = await fetch(
     `${API_BASE_URL}/api/strategy/${encodeURIComponent(driverId)}?current_lap=${currentLap}&total_laps=${totalLaps}&include_undercut=${includeUndercut}`
   );
-  if (!response.ok) throw new Error('Failed to get strategy');
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: 'Failed to get strategy' }));
+    throw new Error(errorData.detail || 'Failed to get strategy');
+  }
   return response.json();
 }
 
