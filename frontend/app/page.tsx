@@ -10,6 +10,17 @@ import { getDataInfo, listTRDTracks, loadTRDData, type DataInfo } from '../lib/a
 export default function Home() {
   const router = useRouter()
   const [backendStatus, setBackendStatus] = useState<'checking' | 'connected' | 'error'>('checking')
+  
+  // Helper function to get status className
+  const getStatusClassName = (status: 'checking' | 'connected' | 'error'): string => {
+    if (status === 'connected') {
+      return 'bg-gradient-to-r from-gr-neon to-gr-neon-dark text-gr-black shadow-gr-neon'
+    }
+    if (status === 'error') {
+      return 'bg-gr-red text-white shadow-gr-red'
+    }
+    return 'bg-gr-grey text-white'
+  }
   const [dataInfo, setDataInfo] = useState<DataInfo | null>(null)
   const [tracks, setTracks] = useState<string[]>([])
   const [demoLoading, setDemoLoading] = useState(false)
@@ -106,13 +117,7 @@ export default function Home() {
         
         {/* Backend Status Indicator */}
         <div className="mb-12 text-center animate-fade-in">
-          <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all ${
-            backendStatus === 'connected' 
-              ? 'bg-gradient-to-r from-gr-neon to-gr-neon-dark text-gr-black shadow-gr-neon' 
-              : backendStatus === 'error'
-              ? 'bg-gr-red text-white shadow-gr-red'
-              : 'bg-gr-grey text-white'
-          }`}>
+          <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all ${getStatusClassName(backendStatus)}`}>
             <span className={`w-2 h-2 rounded-full bg-current ${
               backendStatus === 'connected' ? 'animate-pulse' : ''
             }`}></span>
