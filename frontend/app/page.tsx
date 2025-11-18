@@ -298,7 +298,7 @@ export default function Home() {
               </div>
               <div className="metric-card">
                 <p className="text-xs uppercase tracking-wider text-gr-grey mb-2">Total Laps</p>
-                <p className="text-2xl font-bold text-white">{dataInfo.total_laps}</p>
+                <p className="text-2xl font-bold text-white">{dataInfo.validation.total_laps}</p>
               </div>
             </div>
           </div>
