@@ -35,9 +35,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",  # Local development
-        "https://*.vercel.app",   # Vercel preview deployments
-        "https://toyota-gr-ai.vercel.app",  # Production Vercel URL (update after deployment)
+        "https://toyota-gr.vercel.app",  # Production Vercel URL
+        "https://toyota-gr-muhammed-idris-projects.vercel.app",  # Vercel team URL
+        "https://toyota-gr-git-main-muhammed-idris-projects.vercel.app",  # Vercel branch URL
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",  # Allow all Vercel preview deployments
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
