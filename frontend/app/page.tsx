@@ -109,8 +109,6 @@ export default function Home() {
           <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all ${
             backendStatus === 'connected' 
               ? 'bg-gradient-to-r from-gr-neon to-gr-neon-dark text-gr-black shadow-gr-neon' 
-              : backendStatus === 'checking'
-              ? 'bg-gr-grey text-white'
               : backendStatus === 'error'
               ? 'bg-gr-red text-white shadow-gr-red'
               : 'bg-gr-grey text-white'
