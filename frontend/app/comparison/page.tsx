@@ -252,7 +252,7 @@ export default function DriverComparison() {
                       driver: driverId,
                       tireWear: twi?.current_twi || 0,
                       consistency: consistency?.consistency_score || 0,
-                      trafficLoss: traffic?.time_lost_seconds || 0
+                      trafficLoss: traffic?.traffic_loss || 0
                     }
                   })}
                 />
