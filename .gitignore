@@ -178,7 +178,9 @@ Desktop.ini
 *.heif
 
 # Data files - Large hackathon datasets (26GB+)
-
+# Full dataset is on Kaggle - use Data-GR-minimal for GitHub (4.75MB)
+backend/Data-GR/
+!backend/Data-GR-minimal/  # Allow minimal dataset (essential files only, <5MB)
 
 # Test results
 test_results.log
@@ -234,3 +236,4 @@ $RECYCLE.BIN/
 docs
 notebooks
 data
+Data-GR/

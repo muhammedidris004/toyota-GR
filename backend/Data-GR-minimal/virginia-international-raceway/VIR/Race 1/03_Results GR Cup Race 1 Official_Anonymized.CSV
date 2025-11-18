@@ -1,0 +1,25 @@
+POSITION;NUMBER;STATUS;LAPS;TOTAL_TIME;GAP_FIRST;GAP_PREVIOUS;FL_LAPNUM;FL_TIME;FL_KPH;CLASS;GROUP;DIVISION;VEHICLE;TIRES;ECM Participant Id;ECM Team Id;ECM Category Id;ECM Car Id;ECM Brand Id;ECM Country Id;*Extra 7;*Extra 8;*Extra 9;Sort Key;DRIVER_*Extra 3;DRIVER_*Extra 4;DRIVER_*Extra 5
+1.0;72;Classified;20;45:41.760;-;-;10;2:08.511;147.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+2.0;46;Classified;20;45:41.975;+0.215;+0.215;9;2:08.542;147.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+3.0;13;Classified;20;45:42.948;+1.188;+0.973;10;2:08.432;147.5;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+4.0;7;Classified;20;45:43.217;+1.457;+0.269;8;2:08.776;147.1;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+5.0;55;Classified;20;45:48.537;+6.777;+5.320;9;2:08.497;147.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+6.0;21;Classified;20;45:59.167;+17.407;+10.630;6;2:09.321;146.5;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+7.0;31;Classified;20;45:59.592;+17.832;+0.425;7;2:09.029;146.8;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+8.0;2;Classified;20;46:00.975;+19.215;+1.383;16;2:09.057;146.8;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+9.0;111;Classified;20;46:01.897;+20.137;+0.922;20;2:09.345;146.5;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+10.0;88;Classified;20;46:03.914;+22.154;+2.017;8;2:09.590;146.2;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+11.0;5;Classified;20;46:12.701;+30.941;+8.787;11;2:10.177;145.5;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+12.0;41;Classified;20;46:29.573;+47.813;+16.872;8;2:10.398;145.3;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+13.0;3;Classified;20;46:29.838;+48.078;+0.265;15;2:09.877;145.9;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+14.0;113;Classified;20;46:34.974;+53.214;+5.136;8;2:09.373;146.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+15.0;61;Classified;20;46:52.978;+1:11.218;+18.004;11;2:12.349;143.1;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+16.0;51;Classified;20;47:01.999;+1:20.239;+9.021;18;2:11.208;144.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+17.0;80;Classified;20;47:05.251;+1:23.491;+3.252;11;2:10.879;144.8;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+18.0;12;Classified;20;47:32.432;+1:50.672;+27.181;8;2:13.822;141.6;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+19.0;71;Classified;20;47:38.348;+1:56.588;+5.916;8;2:09.114;146.7;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+20.0;93;Classified;19;44:20.182;1 Lap;1 Lap;14;2:11.154;144.4;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+21.0;15;Classified;11;29:22.615;9 Laps;8 Laps;5;2:09.654;146.1;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+22.0;98;Classified;4;11:42.909;16 Laps;7 Laps;2;2:15.206;140.1;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+23.0;89;Classified;1;2:48.313;19 Laps;3 Laps;0;;;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;
+;78;Not started;0;;;;0;;;Am;;GR Cup;Toyota GR86;;;;;;;;;;;;;;

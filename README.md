@@ -30,7 +30,9 @@ This will:
 
 ### Prerequisites
 
-1. **Data-GR folder is REQUIRED**: Place the TRD hackathon datasets in a `Data-GR/` folder inside the `backend/` folder
+1. **Data-GR folder is REQUIRED**: The TRD hackathon datasets (~26GB) must be downloaded from cloud storage
+   - See **[DATA_SETUP.md](DATA_SETUP.md)** for detailed download instructions
+   - Quick start: `cd backend && python download_data.py --provider gdrive --url "YOUR_LINK"`
 2. **Python 3.10+** installed
 3. **Node.js 18+** installed
 
@@ -65,7 +67,17 @@ This installs:
 - ❌ **NO AI-generated data**
 - ✅ **ONLY real TRD hackathon datasets from Data-GR folder**
 
-**The `Data-GR/` folder is REQUIRED** for the application to work. It must be placed in the `backend/` folder.
+**Data is REQUIRED** for the application to work. Two options:
+
+1. **Minimal Dataset (Recommended for GitHub)**: `Data-GR-minimal/` folder (~4.75 MB) is included in the repo
+   - Contains essential files only (analysis, results, lap times)
+   - Works for all core features and demos
+   - Already in the repository ✅
+
+2. **Full Dataset (Optional)**: `Data-GR/` folder (27.7 GB) from Kaggle
+   - Contains all files including telemetry data
+   - See **[DATA_SETUP.md](DATA_SETUP.md)** for download instructions
+   - Required only for deep telemetry analysis
 
 ## 📁 Project Structure
 
